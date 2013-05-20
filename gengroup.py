@@ -167,15 +167,149 @@ def parseRhelComp(rhelComps):
   return groups, categories
   
 def groupsFromDirs(directoryLocation):
+  groupFiles = []
+  for root, dirs, files in os.walk(groupDir):
+    if not(".svn" in root):
+      groupFiles.extend([(root,x) for x in files])
+      
+  groups = []
+  for root, filename in groupFiles:
+    if not("CategoryDesc.txt" in filename):
+      with open(root+"/"+filename, "r") as file:
+        lines = file.readlines()
+        if len(lines) < 3:
+          sys.exit("Invalid group file: " + filename + "\nIt is too short.")
+        name = lines[0].strip()
+        description = lines[1].strip()
+        packages = [x.strip() for x in lines[2:]]
+        groups.append({"id":filename, "name":name, "description":description, "packages":packages})
+  return groups
   
 def categoriesFromDirs(directoryLocation):
+  categories = []
+  for i in [name for name in os.listdir(directory) if os.path.isdir(directory+"/"+name) and not(".svn" in name)]:
+    category = {}
+    category['groups'] = [name for name in os.listdir(directory+"/"+i) if (not(".svn" in name) and not("CategoryDesc.txt" in name) and not(os.path.isdir(directory+"/"+i+"/"+name)))]
+    with open(directory + "/" + i + "/CategoryDesc.txt") as categoryDescFile:
+      categoryDesc = categoryDescFile.readlines()
+      category['id'] = categoryDesc[0].strip()
+      category['name'] = categoryDesc[1].strip()
+      category['description'] = categoryDesc[2].strip()
+      categoryDescFile.close()
+    categories.append(category)
+  return categories
   
 def validate(groups, categories):
+  # remove empty groups
+  for i in [x for x in groups if not(x['packages']]:
+    print "Removed: ", i['name'], " because it had no packages."
+  groups = [x for x in groups if x['packages']]
+  # remove empty categories
+  iterator = list(categories)
+  for i in iterator:
+    for j in i['groups']:
+      if not([x for x in groups if x['id'] in i['groups']]):
+        categories.remove(i)
+        if verbose:
+          print "Removed: ", i['name'], " because it had no groups."
+  # throw error on group with duplicate id
+  for i in xrange(len(groups)):
+    for j in xrange(i, len(groups):
+      if groups[i]['id'] == groups[j]['id']:
+        sys.exit("The groups: ", groups[i]['name'], " and ", groups[j]['name'], " have the same id. Please adjust accordingly.")
+  # throw error on category with duplicate id
+  for i in xrange(len(categories)):
+    for j in xrange(i, len(categories):
+      if categories[i]['id'] == categories[j]['id']:
+        sys.exit("The categories: ", categories[i]['name'], " and ", categories[j]['name'], " have the same id. Please adjust accordingly.")
+  return groups, categories
   
 def writeToXML(groups, categories):
+  xml = XML_HEADER
+  xml += genGroupXML(groups)
+  xml += genCategoryXML(categories)
+  xml += XML_FOOTER
+  return xml
+  
+def genGroupXML(group):
+  xml = " <group>\n"
+  xml += "  <id>" + group['id'] + "</id>\n"
+  xml += "  <default>False</default>\n"
+  xml += "  <uservisible>True</uservisible>\n"
+  xml += "  <name>" + group['name'] + "</name>\n"
+  xml += "  <description>" + group['description'] + "</description>\n"
+  xml += "   <packagelist>\n"
+  for i in group['packages']:
+    xml += "    <packagereq type=\"default\">" + i + "</packagereq>\n"
+  xml += "   </packagelist>\n"
+  xml += " </group>\n"
+  return xml
+  
+def genCategoryXML(category):
+  xml = " <category>\n"
+  xml += "   <id>" + category['id'] + "</id>\n"
+  xml += "   <name>" + category['name'] + "</name>\n"
+  xml += "   <description>" + category['description'] + "</description>\n"
+  xml += "   <grouplist>\n"
+  for i in category['groups']:
+    xml += "     <groupid>" + i + "</groupid>\n"
+  xml += "   </grouplist>\n </category>\n"
+  return xml
   
 def pushRepoData(webDir, xml):
+  for root, dirs, files in os.walk(webDir+"/repodata/"):
+    for name in files:
+      if "comps" in name:
+        os.remove(os.path.join(root, name))
+        
+  # Calculate length and sha1 hash of raw xml
+  m = hashlib.sha1()
+  m.update(xml)
+  xmlLength = len(xml)
+  xmlHash = m.hexdigest()
   
+  # Gzip and store xml in a temporary location
+  gzippedXMLFile = gzip.open("/tmp/comps-file.gz", "wb")
+  gzippedXMLFile.write(xml)
+  gzippedXMLFile.close()
+  
+  # Calculate length and hash of gzipped xml file
+  m = hashlib.sha1()
+  with open("/tmp/comps-file.gz") as gzippedXMLFile:
+    fileContents = gzippedXMLFile.read()
+  m.update(fileContents)
+  gzipLength = len(fileContents)
+  gzipHash = m.hexdigest()
+  
+  # Move the gzipped file into the repodata directory, and place the raw xml file there as well
+  shutil.copyfile("/tmp/comps-file.gz", os.path.join(webDir, "repodata", gzipHash+"-comps-csee.xml.gz")
+  writeToFile(xml, os.path.join(webDir,"repodata", xmlHash+"-comps-csee.xml"))
+  
+  # Update the description of these two prior files contained
+  # in the /repodata/repomd.xml
+  tree = ET.parse(os.path.join(webDir, "/repodata/repomd.xml"))
+  root = tree.getroot()
+  # Namespaces suck.
+  namespace = "{http://linux.duke.edu/metadata/repo}"
+  # Find and replace the appropriate values for checksum, checksum type, location, timestamp, and size
+  for i in root.findall(namespace+"data"):
+    if i.get("type") == 'group':
+      i.find(namespace+"checksum").text = xmlHash
+      i.find(namespace+"checksum").set("type", "sha")
+      i.find(namespace+"location").set("href", "repodata/"+xmlHash+"-comps-csee.xml")
+      i.find(namespace+"timestamp").text = "%.2f" % time.time()
+      i.find(namespace+"size").text = str(xmlLength)
+    if i.get("type") == 'group_gz':
+      i.find(namespace+"checksum").text = gzipHash
+      i.find(namespace+"checksum").set("type", "sha")
+      i.find(namespace+"open-checksum").text = xmlHash
+      i.find(namespace+"location").set("href", "repodata/"+gzipHash+"-comps-csee.xml.gz")
+      i.find(namespace+"timestamp").text = "%.2f" % time.time()
+      i.find(namespace+"size").text = str(gzipLength)
+  # Write the resulting xml with the appropriate formatting back into the repomd.xml file
+  tree.write(os.path.join(webDir, "repodata/repomd.xml"), xml_declaration=True, encoding="UTF-8", pretty_print=True)
+  if verbose:
+    print "Wrote new xml files to:" + os.path.join(webDir, "repodata/")
     
 def writeToFile(lineList, outFile):
   with open(outFile, "w") as file:
