@@ -1,0 +1,29 @@
+input-methods
+Input Methods
+Software for the input of international text.
+ibus-gtk
+ibus-anthy
+ibus-chewing
+ibus-hangul
+ibus-m17n
+ibus-pinyin
+ibus-rawcode
+ibus-sayura
+ibus-table-additional
+m17n-contrib-assamese
+m17n-contrib-bengali
+m17n-contrib-gujarati
+m17n-contrib-hindi
+m17n-contrib-kannada
+m17n-contrib-maithili
+m17n-contrib-malayalam
+m17n-contrib-marathi
+m17n-contrib-oriya
+m17n-contrib-punjabi
+m17n-contrib-tamil
+m17n-contrib-telugu
+m17n-contrib-urdu
+m17n-db-sinhala
+m17n-db-thai
+gtk2-immodule-xim
+ibus-qt

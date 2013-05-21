@@ -1,0 +1,12 @@
+virtualization-platform
+Virtualization Platform
+Provides an interface for accessing and controlling virtualized guests and containers.
+libvirt
+libvirt-client
+fence-virtd-libvirt
+fence-virtd-multicast
+fence-virtd-serial
+libvirt-cim
+libvirt-java
+libvirt-qpid
+perl-Sys-Virt

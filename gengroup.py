@@ -50,6 +50,9 @@ def main():
       writeToFile(xml, i['OutputFile'])
     if i['PushToWeb']:
       pushRepoData(i['WebDir'], xml)
+    if arguments['verbose']:
+      print "Wrote new xml files to:" + os.path.join(i['WebDir'], "repodata/")
+
     # Add any groups marked for kickstarting to the kickstart list
     kickstartGroups.extend(["@"+x['name']+"\n" for x in groups])
 
@@ -199,12 +202,13 @@ def groupsFromDirs(groupDir):
     if not("CategoryDesc.txt" in filename):
       with open(root+"/"+filename, "r") as file:
         lines = file.readlines()
-        if len(lines) < 3:
+        if len(lines) < 4:
           sys.exit("Invalid group file: " + filename + "\nIt is too short.")
-        name = lines[0].strip()
-        description = lines[1].strip()
-        packages = [x.strip() for x in lines[2:]]
-        groups.append({"id":filename, "name":name, "description":description, "packages":packages})
+        id = lines[0].strip()
+        name = lines[1].strip()
+        description = lines[2].strip()
+        packages = [x.strip() for x in lines[3:]]
+        groups.append({"id":id, "name":name, "description":description, "packages":packages})
   return groups
   
 def categoriesFromDirs(directory):
@@ -281,6 +285,7 @@ def genCategoryXML(category):
   return xml
   
 def pushRepoData(webDir, xml):
+  print "WebDir:", webDir
   for root, dirs, files in os.walk(webDir+"/repodata/"):
     for name in files:
       if "comps" in name:
@@ -311,7 +316,7 @@ def pushRepoData(webDir, xml):
   
   # Update the description of these two prior files contained
   # in the /repodata/repomd.xml
-  tree = ET.parse(os.path.join(webDir, "/repodata/repomd.xml"))
+  tree = ET.parse(os.path.join(webDir, "repodata/repomd.xml"))
   root = tree.getroot()
   # Namespaces suck.
   namespace = "{http://linux.duke.edu/metadata/repo}"
@@ -332,8 +337,6 @@ def pushRepoData(webDir, xml):
       i.find(namespace+"size").text = str(gzipLength)
   # Write the resulting xml with the appropriate formatting back into the repomd.xml file
   tree.write(os.path.join(webDir, "repodata/repomd.xml"), xml_declaration=True, encoding="UTF-8", pretty_print=True)
-  if verbose:
-    print "Wrote new xml files to:" + os.path.join(webDir, "repodata/")
     
 def writeToFile(lineList, outFile):
   with open(outFile, "w") as file:

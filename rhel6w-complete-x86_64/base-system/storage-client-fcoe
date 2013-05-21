@@ -1,0 +1,5 @@
+storage-client-fcoe
+FCoE Storage Client
+Fiber Channel over Ethernet support
+fcoe-utils
+lldpad
