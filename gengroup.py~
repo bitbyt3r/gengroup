@@ -192,6 +192,7 @@ def groupsFromDirs(groupDir):
   for root, dirs, files in os.walk(groupDir):
     if not(".svn" in root):
       groupFiles.extend([(root,x) for x in files])
+  print groupFiles
 
   groups = []
   for root, filename in groupFiles:
@@ -255,6 +256,7 @@ def writeToXML(groups, categories):
   return xml
   
 def genGroupXML(group):
+  print group
   xml = " <group>\n"
   xml += "  <id>" + group['id'] + "</id>\n"
   xml += "  <default>False</default>\n"
