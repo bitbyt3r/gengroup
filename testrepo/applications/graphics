@@ -1,0 +1,18 @@
+graphics
+Graphics Creation Tools
+Software for creation and manipulation of still images.
+gimp
+gimp-data-extras
+gimp-help
+gimp-help-browser
+gutenprint-plugin
+libsane-hpaio
+sane-backends-libs-gphoto2
+sane-frontends
+xsane
+xsane-gimp
+ImageMagick
+dcraw
+inkscape
+netpbm-progs
+xfig

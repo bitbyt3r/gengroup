@@ -148,13 +148,14 @@ def exportGroups(fromFile, toDir):
     description += i['name'] + "\n"
     description += i['description'] + "\n"
     writeToFile(description, os.path.join(toDir, i['id'], "CategoryDesc.txt"))
-    for j in i['groups']:
-      groupData = j['id'] + "\n"
-      groupData += j['name'] + "\n"
-      groupData += j['description'] + "\n"
-      for k in j['packages']:
-        groupData += k + "\n"
-      writeToFile(groupData, os.path.join(toDir, i['id'], j['id']))
+    for j in groups:
+      if j['id'] in i['groups']:
+        groupData = j['id'] + "\n"
+        groupData += j['name'] + "\n"
+        groupData += j['description'] + "\n"
+        for k in j['packages']:
+          groupData += k + "\n"
+        writeToFile(groupData, os.path.join(toDir, i['id'], j['id']))
   
 def parseRhelComp(rhelComps):
   tree = ET.parse(rhelComps)

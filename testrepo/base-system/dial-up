@@ -1,0 +1,11 @@
+dial-up
+Dial-up Networking Support
+Tools for connecting via PPP or ISDN.
+ppp
+lrzsz
+minicom
+wvdial
+efax
+isdn4k-utils
+pptp
+rp-pppoe
