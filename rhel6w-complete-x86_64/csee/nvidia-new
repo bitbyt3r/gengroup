@@ -1,0 +1,4 @@
+New Nvidia Drivers
+This group provides drivers for our newer cards.
+kmod-nvidia
+nvidia-x11-drv

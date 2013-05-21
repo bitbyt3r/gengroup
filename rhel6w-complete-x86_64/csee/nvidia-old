@@ -1,0 +1,4 @@
+Old Nvidia Drivers
+This groups provides legacy drivers for pre-9000 cards.
+kmod-nvidia-304xx
+nvidia-x11-drv-304xx-32bit
