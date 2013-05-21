@@ -1,0 +1,16 @@
+server-platform
+Server Platform
+Supported libraries for the Red Hat Enterprise Linux Server Platform.
+db4
+dbus-libs
+glibc
+krb5-libs
+libgcc
+libstdc++
+ncurses-libs
+nss
+openldap
+openssl
+pam
+redhat-lsb
+zlib

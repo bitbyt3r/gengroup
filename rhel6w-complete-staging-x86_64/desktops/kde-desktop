@@ -1,0 +1,35 @@
+kde-desktop
+KDE Desktop
+A KDE desktop.
+alsa-plugins-pulseaudio
+kde-settings-pulseaudio
+kdeaccessibility
+kdeartwork-screensavers
+kdebase
+kdebase-workspace
+kdelibs
+xsettings-kde
+NetworkManager-gnome
+k3b
+kcoloredit
+kdeadmin
+kdegames
+kdegraphics
+kdemultimedia
+kdenetwork
+kdepim
+kdepim-runtime
+kdeplasma-addons
+kdeutils
+kdm
+kiconedit
+kipi-plugins
+kmid
+konq-plugins
+ksig
+ksshaskpass
+pinentry-qt
+rhn-setup-gnome
+kdebase-workspace-akonadi
+kdebase-workspace-python-applet
+ibus-qt

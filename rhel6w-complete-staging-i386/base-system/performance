@@ -1,0 +1,18 @@
+performance
+Performance Tools
+Tools for diagnosing system and application-level performance problems.
+blktrace
+sysstat
+dstat
+iotop
+latencytop
+oprofile
+perf
+powertop
+seekwatcher
+oprofile-jit
+papi
+sdparm
+sg3_utils
+tuned
+tuned-utils

@@ -1,0 +1,6 @@
+hardware-monitoring
+Hardware monitoring utilities
+A set of tools to monitor server hardware
+smartmontools
+edac-utils
+lm_sensors
