@@ -1,9 +1,0 @@
-directory-server
-Directory Server
-Machine and user identity servers.
-krb5-server
-krb5-server-ldap
-migrationtools
-openldap-servers
-samba
-ypserv
