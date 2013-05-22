@@ -226,6 +226,12 @@ def categoriesFromDirs(directory):
   return categories
   
 def validate(groups, categories):
+  # remove empty packages
+  for i in groups:
+    i['packages'] = [x for x in i['packages'] if x]
+  # remove empty group names
+  for i in categories:
+    i['groups'] = [x for x in i['groups'] if x]
   # remove empty groups
   for i in [x for x in groups if not(x['packages'])]:
     print "Removed: ", i['name'], " because it had no packages."
@@ -268,7 +274,7 @@ def genGroupXML(group):
   xml += "  <description>" + group['description'] + "</description>\n"
   xml += "   <packagelist>\n"
   for i in group['packages']:
-    xml += "    <packagereq type=\"default\">" + i + "</packagereq>\n"
+    xml += "    <packagereq type=\"mandatory\">" + i + "</packagereq>\n"
   xml += "   </packagelist>\n"
   xml += " </group>\n"
   return xml
