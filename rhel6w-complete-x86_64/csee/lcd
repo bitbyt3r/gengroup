@@ -44,7 +44,7 @@ SDL_image-devel
 SDL_mixer-devel
 SDL_net-devel
 SDL_ttf-devel
-VirtualBox-4
+VirtualBox-4.2
 Xaw3d-devel
 a2ps
 aalib
@@ -204,7 +204,6 @@ clucene-core-devel
 clutter-doc
 clutter-gtk-devel
 cmake-gui
-cmucl-extras
 compat-dapl-static
 compat-dapl-utils
 compat-openmpi-devel
@@ -223,7 +222,6 @@ control-center-devel
 coolkey-devel
 cppunit-devel
 cppunit-doc
-cpupowerutils-devel
 cracklib-devel
 crash-devel
 crash-gcore-command
@@ -342,8 +340,6 @@ festvox-jmk-arctic-hts
 festvox-kal-diphone
 festvox-ked-diphone
 festvox-rms-arctic-hts
-ffmpeg-devel
-ffmpeg-libpostproc
 ffmpeg-spice-devel
 fftw-static
 file-static
@@ -370,13 +366,11 @@ freeradius-unixODBC
 freeradius-utils
 freetype-demos
 fribidi-devel
-fuse-ntfs-3g-devel
 fusion-icon-gtk
 fusion-icon-qt
 gc-devel
 gcdmaster
 gd-progs
-gdk-pixbuf-devel
 gedit-devel
 gegl-devel
 geoclue-devel
@@ -636,7 +630,6 @@ jakarta-oro
 jakarta-oro-javadoc
 jakarta-taglibs-standard-javadoc
 jasper-utils
-java-1
 java_cup-javadoc
 java_cup-manual
 javacc-demo
@@ -645,7 +638,6 @@ javassist-javadoc
 jcommon-serializer-javadoc
 jdepend-demo
 jdepend-javadoc
-jdk
 jdom-demo
 jflex
 jflex-javadoc
@@ -690,7 +682,6 @@ kmid-devel
 kmod-hpwdt
 kmod-igb
 kmod-mlx4_core
-kmod-nvidia-304xx
 kmod-pch_gbe
 kmod-snd-hda
 kmod-snd_core
@@ -827,7 +818,6 @@ libnetfilter_conntrack-devel
 libnice-devel
 libnih-devel
 libntlm-devel
-libobasis3
 libogg-devel-docs
 libopenraw-gnome-devel
 libotf-devel
@@ -851,7 +841,6 @@ librdmacm-static
 libreadline-java-javadoc
 libref_array-devel
 librelp-devel
-libreoffice3
 libreport-devel
 libreport-filesystem
 libreport-gtk-devel
@@ -919,9 +908,6 @@ linuxdoc-tools
 linuxptp
 lirc
 lirc-devel
-lirc-devices
-live555-static
-live555-tools
 lksctp-tools-devel
 lksctp-tools-doc
 lldpad-devel
@@ -976,7 +962,6 @@ malaga
 malaga-devel
 matahari
 maxima-gui
-maxima-runtime-cmucl
 maxima-src
 mcpp-doc
 mcstrans
@@ -1002,7 +987,6 @@ mpich2-doc
 mpitests-mvapich
 mpitests-mvapich2
 mpitests-openmpi
-msttcore-fonts
 mt-st
 mtdev-devel
 mtr-gtk
@@ -1590,10 +1574,7 @@ tokyocabinet-devel
 tolua++
 tomcat6-admin-webapps
 tomcat6-docs-webapp
-tomcat6-el-2
 tomcat6-javadoc
-tomcat6-jsp-2
-tomcat6-servlet-2
 tomcat6-webapps
 totem-devel
 totem-jamendo
@@ -1605,11 +1586,9 @@ trilead-ssh2-javadoc
 trousers-static
 tsclient-devel
 tslib-devel
-twolame-devel
 udisks-devel
 unicap-devel
 unixODBC-kde
-updaterpm
 usbmuxd-devel
 usbredir-devel
 usbredir-server

@@ -27,7 +27,6 @@ libdca-devel
 libdca-tools
 libfaac0
 libfaad2
-liblirc_client
 libmad
 libmad-devel
 libotf
@@ -53,9 +52,6 @@ openal-soft-devel
 opencore-amr
 opencore-amr-devel
 opera
-perl-svg-parser
-perl-svg-serialization
-perl-xml-xql
 rar
 rpmrebuild
 thunderbird
