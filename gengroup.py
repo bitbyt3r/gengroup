@@ -111,7 +111,7 @@ def checkArgs():
             value = False
           repository[j] = value
       if not("name" in repository.keys()):
-        repository['name'] = j
+        repository['name'] = i
       if "PushToWeb" in repository.keys() and repository['PushToWeb']:
         files.append(repository['WebDir'])
       else:
