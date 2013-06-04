@@ -28,10 +28,7 @@ def main():
     with open(arguments['importfrom'], "r") as import_from:
       exportGroups(import_from, arguments['importdir'])
  
-  for i in repositories:
-    # This is a list of groups to be installed on the base system.
-    kickstartGroups = ["PACKAGES=\""]
-    
+  for i in repositories:    
     if arguments['verbose']:
       print "Processing:", i['name']
     categories = []
@@ -49,21 +46,29 @@ def main():
     if i['OutputFile']:
       writeToFile(xml, i['OutputFile'])
     if i['PushToWeb']:
-      pushRepoData(i['WebDir'], xml)
-    if arguments['verbose']:
-      print "Wrote new xml files to:" + os.path.join(i['WebDir'], "repodata/")
-
-    # Add any groups marked for kickstarting to the kickstart list
-    kickstartGroups.extend(["@"+x['name']+"\n" for x in groups])
-
-    kickstartGroups.append("\"")
+      for directory in i['WebDir']:
+        pushRepoData(directory, xml)
+        if arguments['verbose']:
+          print "Wrote new xml files to:" + os.path.join(directory, "repodata/")
 
     if i['PushToKickstart']:
+      # This is a list of groups to be installed on the base system.
+      kickstartGroups = ["PACKAGES=\""]
+
+      kickstartBase = getGrouplistFromFile(i['KickstartList'])
+
+      # Add any groups marked for kickstarting to the kickstart list
+      kickstartGroups.extend(["@"+x['name']+"\n" for x in groups if x['name'] in kickstartBase])
+
+      kickstartGroups.append("\"")
+
+      kickstartGroups[1:-2] = sorted(kickstartGroups[1:-2])
+
       writeToFile(kickstartGroups, i['KickstartConfigLocation'])
     
 def checkArgs():
   globalOptions = ["import", "importfrom", "importdir", "verbose", "configfile"]
-  repositoryOptions = ["name", "DirLocation", "OutputFile", "PushToWeb", "WebDir", "PushToKickstart", "KickstartConfigLocation"]
+  repositoryOptions = ["name", "DirLocation", "OutputFile", "PushToWeb", "WebDir", "PushToKickstart", "KickstartConfigLocation", "KickstartList"]
   
   # globalOptions are read from the command line and from the config file. The commandline takes precedence.
   # repositoryOptions are read from their own sections in the config file only.
@@ -110,10 +115,14 @@ def checkArgs():
           if value == "False" or value == "" or value == "false":
             value = False
           repository[j] = value
+      if "WebDir" in repository.keys():
+        repository['WebDir'] = repository['WebDir'].split(",")
+        for j in xrange(0, len(repository['WebDir'])):
+          repository['WebDir'][j] = repository['WebDir'][j].strip()
       if not("name" in repository.keys()):
         repository['name'] = i
       if "PushToWeb" in repository.keys() and repository['PushToWeb']:
-        files.append(repository['WebDir'])
+        files.extend(repository['WebDir'])
       else:
         repository['PushToWeb'] = False
       if "PushToKickstart" in repository.keys() and repository['PushToKickstart']:
@@ -127,13 +136,22 @@ def checkArgs():
     
   if bool(arguments['importfrom']) !=  bool(arguments['importdir']):
     sys.exit("Please supply both an xml file for me to look at and a directory for me to put things.")
+  for i in xrange(0, len(files)):
+    files[i] = files[i].strip()
+  error = ""
   for i in [x for x in files if not(x and os.path.exists(x))]:
-    sys.exit("The file: " + str(i) + " does not exist.")
+    error += "The file: " + str(i) + " does not exist.\n"
+  if error:
+    sys.exit(error)
   for i in repositories:
     if not(i['name'] and i['DirLocation']):
       sys.exit("Please specify the name and directory tree location of every repository.")
   return arguments, repositories
   
+def getGrouplistFromFile(filename):
+  with open(filename, "r") as listfile:
+    return [x.strip() for x in listfile.readlines()]
+
 def exportGroups(fromFile, toDir):
   groups, categories = parseRhelComp(fromFile)
   validate(groups, categories)

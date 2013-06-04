@@ -2,7 +2,7 @@ desktop-debugging
 Desktop Debugging and Performance Tools
 GUI tools for debugging applications and performance.
 abrt-desktop
-report-gtk
+libreport-gtk
 abrt-gui
 bltk
 oprofile-gui

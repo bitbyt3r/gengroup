@@ -28,7 +28,6 @@ abrt-addon-ccpp
 abrt-addon-kerneloops
 abrt-addon-python
 abrt-cli
-abrt-plugin-sosreport
 acpid
 b43-fwcutter
 blktrace
@@ -89,7 +88,6 @@ xz
 yum-utils
 zip
 brltty
-cpufrequtils
 dos2unix
 dumpet
 ecryptfs-utils
@@ -124,7 +122,6 @@ x86info
 yum-plugin-aliases
 yum-plugin-changelog
 yum-plugin-downloadonly
-yum-plugin-protect-packages
 yum-plugin-security
 yum-plugin-tmprepo
 yum-plugin-verify

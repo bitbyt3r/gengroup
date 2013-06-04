@@ -34,6 +34,7 @@ libquicktime
 libquicktime-devel
 librtmp
 librtmp-devel
+libstdc++
 lirc
 lirc-devel
 live555
@@ -44,8 +45,8 @@ nagios-nrpe
 nagios-nrpe-debuginfo
 netcdf
 netcdf-devel
-ntfsprogs
-ntfsprogs-devel
+ntfs-3g
+ntfs-3g-devel
 openafs
 openal-soft
 openal-soft-devel

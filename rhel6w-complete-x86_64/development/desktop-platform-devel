@@ -17,7 +17,7 @@ libXi-devel
 libXrender-devel
 libXt-devel
 libXtst-devel
-libjpeg-devel
+libjpeg-turbo-devel
 libpng-devel
 libxml2-devel
 mesa-libGL-devel
