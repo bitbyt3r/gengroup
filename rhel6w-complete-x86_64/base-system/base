@@ -95,7 +95,6 @@ edac-utils
 genisoimage
 gpm
 kabi-yum-plugins
-kernel-doc
 logwatch
 mkbootdisk
 mtools
