@@ -30,7 +30,6 @@ patchutils
 rcs
 subversion
 swig
-systemtap
 ElectricFence
 ant
 babel
@@ -56,5 +55,3 @@ perltidy
 python-docs
 rpmdevtools
 rpmlint
-systemtap-sdt-devel
-systemtap-server

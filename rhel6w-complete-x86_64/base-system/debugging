@@ -6,7 +6,6 @@ kexec-tools
 latrace
 libreport-python
 strace
-systemtap-runtime
 abrt-addon-ccpp
 abrt-addon-python
 abrt-cli
@@ -22,5 +21,3 @@ gdb-gdbserver
 glibc-utils
 lslk
 memtest86+
-systemtap-client
-systemtap-initscript

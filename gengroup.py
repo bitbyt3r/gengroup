@@ -345,6 +345,23 @@ def pushRepoData(webDir, xml):
   # Namespaces suck.
   namespace = "{http://linux.duke.edu/metadata/repo}"
   # Find and replace the appropriate values for checksum, checksum type, location, timestamp, and size
+  foundGroup = False
+  foundGroup_gz = False
+  for i in root.findall(namespace+"data"):
+    if i.get("type") == 'group':
+      foundGroup = True      
+    if i.get("type") == 'group_gz':
+      foundGroup_gz = True
+  if not foundGroup:
+    groupElement = ET.SubElement(root, namespace+'data')
+    groupElement.set('type', 'group')
+    for i in ["checksum","location","timestamp","size"]:
+      ET.SubElement(groupElement, namespace+i)
+  if not foundGroup_gz:
+    groupgzElement = ET.SubElement(root, namespace+'data')
+    groupgzElement.set('type', 'group_gz')
+    for i in ["checksum","open-checksum","location","timestamp","size"]:
+      ET.SubElement(groupgzElement, namespace+i)
   for i in root.findall(namespace+"data"):
     if i.get("type") == 'group':
       i.find(namespace+"checksum").text = xmlHash
@@ -359,6 +376,7 @@ def pushRepoData(webDir, xml):
       i.find(namespace+"location").set("href", "repodata/"+gzipHash+"-comps-csee.xml.gz")
       i.find(namespace+"timestamp").text = "%.2f" % time.time()
       i.find(namespace+"size").text = str(gzipLength)
+    
   # Write the resulting xml with the appropriate formatting back into the repomd.xml file
   tree.write(os.path.join(webDir, "repodata/repomd.xml"), xml_declaration=True, encoding="UTF-8", pretty_print=True)
     

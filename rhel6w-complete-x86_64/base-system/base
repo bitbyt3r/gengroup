@@ -72,7 +72,6 @@ strace
 sysstat
 system-config-firewall-tui
 system-config-network-tui
-systemtap-runtime
 tcpdump
 tcsh
 time
