@@ -1,0 +1,63 @@
+[main]
+import = False
+
+importfrom = 
+
+importdir = 
+
+verbose = True
+
+[rhel6w-complete-x86_64]
+PushToWeb = True
+
+webDir = /var/www/mrepo/rhel6w-complete-x86_64/RPMS.all
+
+PushToKickstart = False
+
+KickstartConfigLocation = 
+
+DirLocation = /extra/projects/gengroup/rhel6w-complete-x86_64
+
+OutputFile = /mrepo/rhel6w-complete-x86_64/all-comps.xml
+
+[rhel6w-complete-i386]
+PushToWeb = True
+
+webDir = /var/www/mrepo/rhel6w-complete-i386/RPMS.all
+
+PushToKickstart = False
+
+KickstartConfigLocation = 
+
+DirLocation = /extra/projects/gengroup/rhel6w-complete-i386
+
+OutputFile = /mrepo/rhel6w-complete-i386/all-comps.xml
+
+[rhel6w-complete-staging-x86_64]
+PushToWeb = True
+
+webDir = /var/www/mrepo/rhel6w-complete-staging-x86_64/RPMS.all
+
+PushToKickstart = False
+
+KickstartConfigLocation = 
+
+DirLocation = /extra/projects/gengroup/rhel6w-complete-staging-x86_64
+
+OutputFile = /mrepo/rhel6w-complete-staging-x86_64/all-comps.xml
+
+[rhel6w-complete-staging-i386]
+PushToWeb = True
+
+webDir = /var/www/mrepo/rhel6w-complete-staging-i386/RPMS.all
+
+PushToKickstart = False
+
+KickstartConfigLocation = 
+
+DirLocation = /extra/projects/gengroup/rhel6w-complete-staging-i386
+
+OutputFile = /mrepo/rhel6w-complete-staging-i386/all-comps.xml
+
+
+
