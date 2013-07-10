@@ -1,9 +1,0 @@
-smart-card
-Smart card support
-Support for using smart card authentication.
-ccid
-coolkey
-esc
-gdm-plugin-smartcard
-pam_pkcs11
-opencryptoki

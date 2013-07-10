@@ -1,7 +1,0 @@
-virtualization-client
-Virtualization Client
-Clients for installing and managing virtualization instances.
-python-virtinst
-virt-manager
-virt-viewer
-virt-top
