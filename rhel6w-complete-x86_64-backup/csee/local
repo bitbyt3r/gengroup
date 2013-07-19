@@ -32,7 +32,6 @@ libmad-devel
 libotf
 libquicktime
 libquicktime-devel
-libreoffice4.0
 librtmp
 librtmp-devel
 libstdc++
@@ -62,13 +61,4 @@ x264
 x264-devel
 xvidcore
 xvidcore-devel
-yp-tools
-krb5-workstation
-openafs-krb5
-pam_krb5
-pam_ldap
-rsyslog
-nfs-utils
-popt
-mysql
-gdbm
+

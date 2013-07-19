@@ -1,0 +1,8 @@
+surveillance
+Surveillance
+This group installs everything for zoneminder.
+perl-Sys-Mmap
+ZMffmpeg
+ZoneMinder
+libmpeg2
+mpg123

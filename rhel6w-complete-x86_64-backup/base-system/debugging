@@ -1,0 +1,26 @@
+debugging
+Debugging Tools
+Tools for debugging misbehaving applications and diagnosing performance problems.
+gdb
+kexec-tools
+latrace
+libreport-python
+strace
+systemtap-runtime
+abrt-addon-ccpp
+abrt-addon-python
+abrt-cli
+cas
+crash
+crash-trace-command
+elfutils
+ltrace
+trace-cmd
+valgrind
+flightrecorder
+gdb-gdbserver
+glibc-utils
+lslk
+memtest86+
+systemtap-client
+systemtap-initscript

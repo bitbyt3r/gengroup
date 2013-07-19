@@ -1,5 +1,5 @@
-lcd
-Lowest Common Denominator
+core
+Core
 This group holds the fewest number of packages needed to install all of our stuff.
 389-ds-base-devel
 ConsoleKit-devel
@@ -51,7 +51,6 @@ aalib
 aalib-devel
 abrt-addon-vmcore
 abrt-devel
-acroread-plugin
 adaptx-doc
 adaptx-javadoc
 akonadi-devel
@@ -125,13 +124,6 @@ bacula-storage-sqlite
 bacula-traymonitor
 baekmuk-ttf-fonts-ghostscript
 bash-doc
-batik-demo
-batik-javadoc
-batik-rasterizer
-batik-slideshow
-batik-squiggle
-batik-svgpp
-batik-ttf2svg
 bcel-javadoc
 bcel-manual
 bdftruncate
@@ -295,15 +287,6 @@ ecryptfs-utils-python
 edac-utils-devel
 eggdbus-devel
 elfutils-devel-static
-emacs-a2ps-el
-emacs-anthy-el
-emacs-auctex-doc
-emacs-auctex-el
-emacs-el
-emacs-git-el
-emacs-gnuplot-el
-emacs-mercurial-el
-emacs-pyrex
 emerald-devel
 emerald-themes
 enca-devel
@@ -329,7 +312,6 @@ fakechroot
 farsight2-devel
 fcoe-target-utils
 fence-agents
-fence-virtd-libvirt-qpid
 festival-devel
 festival-docs
 festival-speechtools-utils
@@ -353,7 +335,6 @@ flute-javadoc
 fontforge-devel
 fontpackages-devel
 fontpackages-tools
-fop-javadoc
 fprintd-devel
 freeipmi-devel
 freeradius-krb5
@@ -676,17 +657,7 @@ kdepimlibs-apidocs
 kdeplasma-addons-devel
 kdewebdev
 kdewebdev-devel
-kernel-debug
-kernel-debug-devel
 kmid-devel
-kmod-hpwdt
-kmod-igb
-kmod-mlx4_core
-kmod-pch_gbe
-kmod-snd-hda
-kmod-snd_core
-kmod-snd_hda
-kmod-tg3
 kpathsea-devel
 kross-python
 ladspa-devel
@@ -1017,7 +988,7 @@ nmap-frontend
 nss-pkcs11-devel
 nss-sysinit
 nss_compat_ossl-devel
-ntfsprogs-devel
+ntfs-3g-devel
 ntp-doc
 ntp-perl
 numpy-f2py
@@ -1032,7 +1003,6 @@ ocaml-camlp4-devel
 ocaml-csv-devel
 ocaml-curses-devel
 ocaml-docs
-ocaml-emacs
 ocaml-extlib-devel
 ocaml-findlib-devel
 ocaml-gettext-devel
@@ -1071,6 +1041,7 @@ openslp-server
 opensm-static
 opensp-devel
 openssh-ldap
+openssh-server
 openssl-perl
 openssl-static
 openswan-doc
@@ -1079,6 +1050,8 @@ openwsman-python
 openwsman-ruby
 oprofile-devel
 oscilloscope
+pacemaker-cts
+pacemaker-doc
 pakchois-devel
 pam_ssh_agent_auth
 paps-devel
@@ -1372,7 +1345,6 @@ protobuf-python
 protobuf-static
 protobuf-vim
 pstoedit-devel
-publican-redhat
 pulseaudio-esound-compat
 pulseaudio-module-zeroconf
 pychart-doc
@@ -1507,7 +1479,6 @@ speex-tools
 spice-common-devel
 spice-gtk-devel
 spice-gtk-tools
-spice-usb-share
 spice-vdagent
 sqlite-doc
 sqlite-tcl
@@ -1607,7 +1578,6 @@ vinagre-devel
 virt-who
 voikko-tools
 volume_key-devel
-vte-devel
 w3m-img
 wavpack-devel
 wdaemon
