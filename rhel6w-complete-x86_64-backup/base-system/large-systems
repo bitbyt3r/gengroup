@@ -1,8 +1,0 @@
-large-systems
-Large Systems Performance
-Performance support tools for large systems
-numactl
-libcgroup
-libhugetlbfs
-libhugetlbfs-utils
-libtopology

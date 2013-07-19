@@ -1,9 +1,0 @@
-network-file-system-client
-Network file system client
-Enables the system to attach to network storage.
-autofs
-cifs-utils
-nfs-utils
-nfs4-acl-tools
-samba-client
-cachefilesd
