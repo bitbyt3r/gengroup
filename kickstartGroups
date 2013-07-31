@@ -1,56 +1,56 @@
-@Additional Development
-@Backup Client
-@Base
-@CIFS file server
-@CSEE Local
-@Cfengine
-@Compatibility libraries
-@Console internet tools
-@Desktop
-@Desktop Debugging and Performance Tools
-@Desktop Platform
-@Desktop Platform Development
-@Development tools
-@Dial-up Networking Support
-@Directory Client
-@Directory Server
-@E-mail server
-@Eclipse
-@FCoE Storage Client
-@FTP server
-@Fonts
-@General Purpose Desktop
-@Graphical Administration Tools
-@Hardware monitoring utilities
-@Infiniband Support
-@Input Methods
-@Internet Applications
-@Internet Browser
-@KDE Desktop
-@Large Systems Performance
-@Legacy X Window System compatibility
-@Lowest Common Denominator
-@Mainframe Access
-@NFS file server
-@Network Infrastructure Server
-@Network Storage Server
-@Network file system client
-@Networking Tools
-@Office Suite and Productivity
-@PHP Support
-@Performance Tools
-@Printing client
-@Remote Desktop Clients
-@Scientific support
-@Security Tools
-@Server Platform
-@Server Platform Development
-@Smart card support
-@Storage Availability Tools
-@Technical Writing
-@TurboGears application framework
-@Web Server
-@Web Servlet Engine
-@X Window System
-@iSCSI Storage Client
-@TeX support
+Additional Development
+Backup Client
+Base
+CIFS file server
+CSEE Local
+Cfengine
+Compatibility libraries
+Console internet tools
+Desktop
+Desktop Debugging and Performance Tools
+Desktop Platform
+Desktop Platform Development
+Development tools
+Dial-up Networking Support
+Directory Client
+Directory Server
+E-mail server
+Eclipse
+FCoE Storage Client
+FTP server
+Fonts
+General Purpose Desktop
+Graphical Administration Tools
+Hardware monitoring utilities
+Infiniband Support
+Input Methods
+Internet Applications
+Internet Browser
+KDE Desktop
+Large Systems Performance
+Legacy X Window System compatibility
+Lowest Common Denominator
+Mainframe Access
+NFS file server
+Network Infrastructure Server
+Network Storage Server
+Network file system client
+Networking Tools
+Office Suite and Productivity
+PHP Support
+Performance Tools
+Printing client
+Remote Desktop Clients
+Scientific support
+Security Tools
+Server Platform
+Server Platform Development
+Smart card support
+Storage Availability Tools
+Technical Writing
+TurboGears application framework
+Web Server
+Web Servlet Engine
+X Window System
+iSCSI Storage Client
+TeX support
