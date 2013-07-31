@@ -72,3 +72,6 @@ nfs-utils
 popt
 mysql
 gdbm
+compat-libf2c-34.i686
+compat-libstdc++-33.i686
+libXp.i686

@@ -1017,7 +1017,6 @@ nmap-frontend
 nss-pkcs11-devel
 nss-sysinit
 nss_compat_ossl-devel
-ntfsprogs-devel
 ntp-doc
 ntp-perl
 numpy-f2py
