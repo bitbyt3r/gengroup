@@ -1,0 +1,11 @@
+scientific
+Scientific support
+Tools for mathematical and scientific computations, and parallel computing.
+gnuplot
+units
+atlas
+lapack
+mpich2
+mvapich2
+numpy
+openmpi

@@ -1,0 +1,16 @@
+x11
+X Window System
+X Window System Support.
+xorg-x11-drivers
+xorg-x11-server-Xorg
+xorg-x11-xauth
+xorg-x11-xinit
+firstboot
+glx-utils
+hal
+plymouth-system-theme
+wacomexpresskeys
+xorg-x11-server-utils
+xorg-x11-utils
+xvattr
+control-center
