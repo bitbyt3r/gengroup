@@ -1,3 +1,0 @@
-language-support
-Languages
-These packages provide support for various locales including fonts and input methods.

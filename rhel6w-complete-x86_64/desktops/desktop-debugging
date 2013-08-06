@@ -1,9 +1,0 @@
-desktop-debugging
-Desktop Debugging and Performance Tools
-GUI tools for debugging applications and performance.
-abrt-desktop
-libreport-gtk
-abrt-gui
-bltk
-oprofile-gui
-xrestop
