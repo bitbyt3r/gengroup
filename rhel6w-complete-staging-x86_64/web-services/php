@@ -1,0 +1,16 @@
+php
+PHP Support
+PHP web application framework.
+php
+php-gd
+php-pdo
+php-pear
+php-xml
+php-ldap
+php-mysql
+php-odbc
+php-pecl-apc
+php-pecl-memcache
+php-pgsql
+php-soap
+php-xmlrpc

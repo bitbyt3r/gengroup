@@ -1,0 +1,24 @@
+legacy-unix
+Legacy UNIX compatibility
+Compatibility programs for migration from or working with legacy UNIX environments.
+xinetd
+authd
+cups-lpd
+dump
+finger
+finger-server
+krb5-appl-servers
+ksh
+mksh
+ncompress
+rsh
+rsh-server
+rusers
+rusers-server
+rwho
+talk
+talk-server
+tcp_wrappers
+telnet
+telnet-server
+tftp

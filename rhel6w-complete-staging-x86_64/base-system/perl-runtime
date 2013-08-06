@@ -1,0 +1,15 @@
+perl-runtime
+Perl Support
+Perl interfaces to common libraries and functionality.
+perl
+perl-Crypt-SSLeay
+perl-XML-Dumper
+perl-XML-Grove
+perl-XML-Twig
+perl-core
+perl-DBD-SQLite
+perl-Date-Calc
+perl-Date-Manip
+perl-Frontier-RPC
+perl-LDAP
+perl-suidperl

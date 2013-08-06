@@ -1,0 +1,18 @@
+network-server
+Network Infrastructure Server
+Servers for core network protocols and services, such as DHCP or DNS.
+bind
+bind-chroot
+bind-dyndb-ldap
+dhcp
+dnsmasq
+freeradius
+quagga
+radvd
+rsyslog-gnutls
+rsyslog-gssapi
+rsyslog-mysql
+rsyslog-pgsql
+rsyslog-relp
+syslinux
+tftp-server

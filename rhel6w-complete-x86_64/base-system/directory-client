@@ -1,0 +1,19 @@
+directory-client
+Directory Client
+Clients for integration into a network managed by a directory service.
+ipa-client
+oddjob-mkhomedir
+sssd
+ypbind
+certmonger
+hesinfo
+krb5-appl-clients
+krb5-pkinit-openssl
+krb5-workstation
+ldapjdk
+nscd
+nss-pam-ldapd
+openldap-clients
+pam_krb5
+pam_ldap
+samba-winbind

@@ -1,0 +1,18 @@
+infiniband
+Infiniband Support
+Software designed for supporting clustering and grid connectivity using RDMA-based InfiniBand and iWARP fabrics.
+libibcm
+libibverbs
+libibverbs-utils
+librdmacm
+librdmacm-utils
+rdma
+libcxgb3
+libibmad
+libibumad
+libmlx4
+libmthca
+rds-tools
+libibcommon
+mstflint
+opensm
