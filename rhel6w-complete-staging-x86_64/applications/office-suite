@@ -1,21 +1,15 @@
 office-suite
 Office Suite and Productivity
 A full-purpose office suite, and other productivity tools.
-libreoffice-calc
-libreoffice-draw
-libreoffice-graphicfilter
-libreoffice-impress
-libreoffice-math
-libreoffice-writer
-libreoffice-xsltfilter
-libreoffice-base
-libreoffice-emailmerge
-libreoffice-headless
-libreoffice-javafilter
-libreoffice-ogltrans
-libreoffice-presentation-minimizer
-libreoffice-report-builder
-libreoffice-wiki-publisher
+libreoffice4.1-calc
+libreoffice4.1-draw
+libreoffice4.1-impress
+libreoffice4.1-math
+libreoffice4.1-writer
+libreoffice4.1-base
+libreoffice4.1-dict-en
+libreoffice4.1-dict-es
+libreoffice4.1-dict-fr
+libreoffice4.1-en-US
 planner
 taskjuggler
-libreoffice-langpack-en
