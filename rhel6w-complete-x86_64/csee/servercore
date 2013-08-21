@@ -830,7 +830,6 @@ perl-MIME-tools
 perl-Mail-DKIM
 perl-MailTools
 perl-Makefile-DOM
-perl-Makefile-Parser
 perl-Module-Info
 perl-Module-Install
 perl-Module-ScanDeps

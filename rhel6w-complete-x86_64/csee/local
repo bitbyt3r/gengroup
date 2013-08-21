@@ -11,7 +11,6 @@ firefox
 fribidi
 fribidi-devel
 fuse
-google-chrome-stable
 java-1.7.0-oracle
 java-1.7.0-oracle-devel
 java-1.7.0-oracle-javafx
@@ -32,7 +31,15 @@ libmad-devel
 libotf
 libquicktime
 libquicktime-devel
-libreoffice4.0
+libreoffice4.1
+libreoffice4.1-base
+libreoffice4.1-calc
+libreoffice4.1-draw
+libreoffice4.1-freedesktop-menus
+libreoffice4.1-impress
+libreoffice4.1-math
+libreoffice4.1-ure
+libreoffice4.1-writer
 librtmp
 librtmp-devel
 libstdc++
@@ -73,5 +80,8 @@ popt
 mysql
 gdbm
 compat-libf2c-34
-compat-libstdc++-33
-libXp
+cadence-requires
+fail2ban
+pine-requires
+csee-requires
+aspell-en
