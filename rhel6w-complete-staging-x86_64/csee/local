@@ -81,3 +81,7 @@ mysql
 gdbm
 compat-libf2c-34
 cadence-requires
+fail2ban
+pine-requires
+csee-requires
+aspell-en

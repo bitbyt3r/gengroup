@@ -18,9 +18,6 @@ XML_FOOTER = """</comps>
 DEFAULT_CONFIG_FILE = "./groups.conf"
 
 def main():
-  # Get Args and repositories from configfile and commandline
-  arguments, repositories = checkArgs()
- 
   # If desired, retrieve groups from an xml file and push them to
   # a set of directories. This is useful if you want to grab the
   # comps.xml file from an install cd and use them in this system.
@@ -309,7 +306,8 @@ def genCategoryXML(category):
   return xml
   
 def pushRepoData(webDir, xml):
-  print "WebDir:", webDir
+  if arguments['verbose']:
+    print "WebDir:", webDir
   for root, dirs, files in os.walk(webDir+"/repodata/"):
     for name in files:
       if "comps" in name:
@@ -385,4 +383,7 @@ def writeToFile(lineList, outFile):
     for i in lineList:
       file.write(i)
       
+# Get Args and repositories from configfile and commandline
+arguments, repositories = checkArgs()
+ 
 main()
