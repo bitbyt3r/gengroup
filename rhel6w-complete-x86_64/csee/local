@@ -85,3 +85,5 @@ fail2ban
 aspell-en
 python-lockfile
 python-daemon
+ntfsprogs
+screen
