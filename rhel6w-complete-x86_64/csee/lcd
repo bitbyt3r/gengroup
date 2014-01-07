@@ -603,7 +603,6 @@ iwl6000g2b-firmware
 jack-audio-connection-kit-devel
 jack-audio-connection-kit-example-clients
 jakarta-commons-beanutils-javadoc
-jakarta-commons-codec-javadoc
 jakarta-commons-collections-javadoc
 jakarta-commons-collections-testframework
 jakarta-commons-collections-testframework-javadoc
@@ -621,7 +620,6 @@ jakarta-commons-httpclient-manual
 jakarta-commons-io-javadoc
 jakarta-commons-lang-javadoc
 jakarta-commons-logging-javadoc
-jakarta-commons-net-javadoc
 jakarta-commons-pool-javadoc
 jakarta-commons-pool-tomcat5
 jakarta-oro
@@ -676,6 +674,7 @@ kdewebdev
 kdewebdev-devel
 kernel-debug
 kernel-debug-devel
+kernel-devel
 kmid-devel
 kmod-hpwdt
 kmod-igb
@@ -920,7 +919,6 @@ lpsolve-devel
 lshw-gui
 lua-devel
 lua-static
-lucene-demo
 lucene-javadoc
 lvm2-devel
 lynx
